@@ -1,0 +1,678 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+$primaryColor: #1b2f5a;
+$secondaryColor: #f07167;
+
+html {
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.6rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondaryColor;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("assets/Decore.png");
+  background-repeat: no-repeat;
+  background-position: top 0 right 0;
+  font-family: "Poppins", sans-serif;
+  color: $primaryColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+li,
+p,
+span,
+button {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+button {
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  border: none;
+  background-color: #ff9f1c;
+  font-size: 1.1rem;
+}
+
+.scrollToTop {
+  display: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 4rem;
+  background-color: $secondaryColor;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+  cursor: pointer;
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    font-size: 1.8rem;
+    color: white;
+  }
+}
+
+.container {
+  margin: 0 10rem;
+}
+
+nav {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+
+    .brand {
+      color: $primaryColor;
+      font-size: 3rem;
+      font-family: "Zen Tokyo Zoo", cursive;
+    }
+    .responsive-toggle {
+      display: none;
+    }
+  }
+  .links {
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin: 0 3rem;
+        a {
+          color: $primaryColor;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.starter {
+  display: flex;
+  .content {
+    margin: 4rem 0 0 0;
+    .subTitle {
+      color: $secondaryColor;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-size: 3.3rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+      span {
+        background-image: url("assets/Decore\ Text.png");
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: bottom 5px left 0;
+      }
+    }
+    .description {
+      font-size: 1.1rem;
+      letter-spacing: 0.15rem;
+      margin-bottom: 1rem;
+    }
+    .last {
+      display: flex;
+
+      align-items: center;
+      .play {
+        margin: 2rem 0 2rem 2rem;
+        display: flex;
+
+        align-items: center;
+        button {
+          border-radius: 100%;
+          padding: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 1rem;
+          background-color: #f94144;
+          box-shadow: #f941443d 0px 10px 20px, #f9414449 0px 6px 6px;
+          i {
+            font-size: 0.8rem;
+          }
+        }
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .image {
+    img {
+      height: 33rem;
+    }
+  }
+}
+
+.services {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .title {
+    font-size: 2rem;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-top: 2rem;
+    .card {
+      height: 12rem;
+      padding: 3rem 1rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 1rem;
+      .icon {
+        margin-bottom: 1rem;
+      }
+      .title {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.destination {
+  margin: 5rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .cards {
+    display: flex;
+    gap: 4rem;
+
+    .image {
+      img {
+        height: 18rem;
+        width: 18rem;
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+    }
+    .time {
+      display: flex;
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.next-trip {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  .content {
+    .title {
+      font-size: 2rem;
+      margin: 0.3rem 0 1rem 0;
+    }
+    .steps {
+      .step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        gap: 1rem;
+        .text {
+          .title {
+            font-size: 1.2rem;
+            margin: 0.3rem 0;
+          }
+          p {
+            width: 70%;
+          }
+        }
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .trip {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 2rem;
+    padding: 1rem;
+    .title {
+      margin: 0.5rem;
+    }
+    .subTitle {
+      margin: 0 0.5rem;
+      color: rgb(78, 78, 78);
+    }
+    .icons {
+      margin: 1rem 0;
+      display: flex;
+      .icon {
+        margin: 0 0 0 0.5rem;
+        background-color: rgb(224, 224, 224);
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3rem;
+      }
+    }
+    .like {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 1rem;
+      color: rgb(78, 78, 78);
+    }
+  }
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3rem;
+  gap: 10rem;
+  .content {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    .title {
+      font-size: 2rem;
+    }
+    .subTitle {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+  }
+  .review {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 9rem;
+    width: 20rem;
+    border-radius: 2rem;
+    padding: 3rem;
+    p {
+      line-height: 1.4rem;
+      letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      margin-bottom: 0.3rem;
+    }
+    h4 {
+      font-weight: 100;
+    }
+  }
+}
+
+.brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    margin: 0 2rem;
+  }
+}
+
+.subscribe {
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(-225deg, #b6cee86e 0%, #8578f563 100%);
+  border-radius: 5rem 1rem 1rem 1rem;
+  .title {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgb(82, 63, 117);
+  }
+  input {
+    border: none;
+    width: 20rem;
+    border-radius: 0.3rem;
+    padding: 1.2rem 2rem;
+    margin-right: 1rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    background-color: #f07167;
+    padding: 1.1rem 3rem;
+  }
+}
+
+footer {
+  margin: 5rem 0;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    .brand {
+      .logo {
+        color: $primaryColor;
+        font-size: 3rem;
+        font-family: "Zen Tokyo Zoo", cursive;
+      }
+      .subTitle {
+        width: 80%;
+      }
+    }
+    .social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.4rem;
+        .link {
+          height: 3rem;
+          width: 3rem;
+          margin: 0 1rem;
+          border-radius: 100%;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+          i {
+            font-size: 1.3rem;
+          }
+        }
+      }
+      .app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .title {
+          margin-bottom: 0.7rem;
+          font-weight: 500;
+        }
+        .links {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        margin: 1rem 0;
+      }
+    }
+  }
+  span {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .container {
+    margin: 0 2rem;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    .nav-container {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .responsive-toggle {
+        display: block;
+      }
+    }
+    .nav-toggle {
+      height: 4rem !important;
+      ul {
+        margin-top: 1rem;
+        display: flex !important;
+      }
+    }
+    .links {
+      height: 0;
+      transition: 0.4s ease-in-out;
+
+      ul {
+        display: none;
+        flex-direction: column;
+      }
+    }
+  }
+  .starter {
+    flex-direction: column;
+    .content {
+    }
+    .image {
+      img {
+        height: 15rem;
+        margin-top: 4rem;
+      }
+    }
+  }
+  .services {
+    .cards {
+      flex-direction: column;
+    }
+  }
+  .destination {
+    .cards {
+      flex-direction: column;
+    }
+  }
+  .next-trip {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .testimonials {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 1.5rem;
+    .review {
+      width: 10rem;
+      height: min-content;
+    }
+  }
+  .brands {
+    flex-direction: column;
+    margin: 2rem 0;
+    img {
+      margin: 1.2rem 0;
+    }
+  }
+  .subscribe {
+    .title {
+      font-size: 1rem;
+      width: 80%;
+    }
+    .contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      input {
+        width: 12rem;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  footer {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    margin: 0 4rem;
+  }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    .nav-container {
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .responsive-toggle {
+        display: block;
+      }
+    }
+    .nav-toggle {
+      height: 8rem !important;
+      ul {
+        display: flex !important;
+      }
+    }
+    .links {
+      height: 0;
+      transition: 0.4s ease-in-out;
+      // margin-top: 2rem;
+      ul {
+        flex-direction: column;
+        display: none;
+
+        li {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+  .starter {
+    flex-direction: column;
+    .image {
+      img {
+        height: 40rem;
+        margin-top: 4rem;
+      }
+    }
+  }
+  .services {
+    .cards {
+      flex-direction: column;
+    }
+  }
+  .destination {
+    .cards {
+      flex-direction: column;
+    }
+  }
+  .next-trip {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .testimonials {
+    gap: 2rem;
+    margin: 1.5rem;
+    .review {
+      width: 10rem;
+      height: min-content;
+    }
+  }
+  .brands {
+    flex-direction: column;
+    margin: 2rem 0;
+    img {
+      margin: 1.2rem 0;
+    }
+  }
+  .subscribe {
+    .title {
+      font-size: 2rem;
+      width: 80%;
+    }
+    .contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      input {
+        width: 12rem;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  footer {
+    font-size: 1.3rem;
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    span {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    margin: 0 6rem;
+  }
+}
